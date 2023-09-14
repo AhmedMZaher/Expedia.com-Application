@@ -1,0 +1,2 @@
+# Expedia.com-Application
+ The Travel Management System is a comprehensive Java-based application designed to facilitate travel planning and itinerary management. It allows users to create, customize, and organize their travel itineraries, comprising of flights, hotels, cars, and other travel essentials. The system integrates with external APIs to retrieve real-time information on available travel options, ensuring flexibility and adaptability to diverse user preferences.
