@@ -23,3 +23,40 @@
 hs_err_pid*
 replay_pid*
 *.xml
+*.xml
+Database/.idea/Database.iml
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/xa/xa_install.sql
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/xa/x64/sqljdbc_xa.dll
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/xa/x86/sqljdbc_xa.dll
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/thirdpartynotices.txt
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/sparse/SparseColumns.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/resultsets/UpdateResultSet.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/datatypes/SpatialDataTypes.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/datatypes/SqlXmlDataType.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/install.txt
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/release.txt
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/redist.txt
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/license.txt
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/auth/x64/mssql-jdbc_auth-12.4.1.x64.dll
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/auth/x86/mssql-jdbc_auth-12.4.1.x86.dll
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/adaptive/readLargeData.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/adaptive/updateLargeData.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/adaptive/ExecuteStoredProcedures.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/alwaysencrypted/AlwaysEncrypted.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/azureactivedirectoryauthentication/AzureActiveDirectoryAuthentication.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/connections/ConnectURL.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/connections/ConnectDataSource.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/constrained/ConstrainedDelegation.java
+Expedia.com Application/Expedia.com.iml
+Expedia.com Application/.idea/workspace.xml
+Expedia.com Application/Expedia.com.iml
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/resultsets/CacheResultSet.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/datatypes/BasicDataTypes.java
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/dataclassification/DataDiscoveryAndClassification.java
+Expedia.com Application/.idea/dataSources/48734263-ef0f-42de-b9b8-8cb9ff87da15/storage_v2/_src_/database/expediaDB.EpVSBw/schema/sys.zb4BAA.meta
+Expedia.com Application/.idea/dataSources/48734263-ef0f-42de-b9b8-8cb9ff87da15/storage_v2/_src_/database/expediaDB.EpVSBw/schema/dbo.sYMBAA.meta
+Expedia.com Application/.idea/dataSources/48734263-ef0f-42de-b9b8-8cb9ff87da15/storage_v2/_src_/database/expediaDB.EpVSBw.meta
+Expedia.com Application/.idea/dataSources/48734263-ef0f-42de-b9b8-8cb9ff87da15/storage_v2/_src_/database/expediaDB.EpVSBw/schema/INFORMATION_SCHEMA.NBgcMw.meta
+Expedia.com Application/Expedia.com.iml
+Expedia.com Application/Expedia.com.iml
+Expedia.com Application/sqljdbc_12.4.1.0_enu/sqljdbc_12.4/enu/samples/resultsets/RetrieveResultSet.java
