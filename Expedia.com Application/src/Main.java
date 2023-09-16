@@ -1,4 +1,6 @@
+import Controller.ChangeEmailController;
 import Controller.CreateAccountController;
+import Controller.LoginController;
 import DAO.DataSource;
 
 import java.sql.Connection;
@@ -13,8 +15,10 @@ public class Main {
             e.printStackTrace();
             System.out.println("Error while establishing connection.");
         }
-        CreateAccountController c = new CreateAccountController();
-        c.createAccount();
+//        CreateAccountController.createAccount();
+//        LoginController.userLogin();
+
+        ChangeEmailController.changeEmail("ahmed@gmail.com");
 //        DataSource dataSource = new DataSource(); // Create an instance of DataSource
 //        Connection c = DataSource.getConnection();
 //        if (c != null) {
