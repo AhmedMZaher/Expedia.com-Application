@@ -1,9 +1,6 @@
 package View;
 
-import Model.ScannerProvider;
-import Model.User;
-
-import java.util.Scanner;
+import Utils.ScannerProvider;
 
 public class CreateAccountView {
 

@@ -92,4 +92,21 @@ public class UserDao {
 
         return false; // If an error occurred
     }
+    public static boolean changePassword(String email, String password) {
+        try (Connection connection = DataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement("UPDATE Traveler SET password = ? WHERE email = ?")) {
+
+            statement.setString(1, password);
+            statement.setString(2, email);
+
+            int rowsAffected = statement.executeUpdate();
+
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the error appropriately (logging, throwing a custom exception, etc.)
+        }
+
+        return false; // If an error occurred
+    }
 }

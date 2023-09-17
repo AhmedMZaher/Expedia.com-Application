@@ -2,15 +2,13 @@ package View;
 
 import Utils.ScannerProvider;
 
-public class ChangeEmailView {
-
-    public static String getEmail() {
-        System.out.print("Enter new email: ");
+public class ChangePasswordView {
+    public static String getPassword(){
+        System.out.println("Enter new password: ");
         return ScannerProvider.scanner.nextLine();
     }
-
     public static void displaySuccessMessage() {
-        System.out.println("Email changed successfully!");
+        System.out.println("Password changed successfully!");
     }
 
     public static void displayErrorMessage(String message) {

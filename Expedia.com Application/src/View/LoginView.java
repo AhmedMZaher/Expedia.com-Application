@@ -1,6 +1,6 @@
 package View;
 
-import Model.ScannerProvider;
+import Utils.ScannerProvider;
 
 public class LoginView {
     public static String getEmailInput() {

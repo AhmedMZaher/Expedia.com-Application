@@ -1,4 +1,5 @@
 import Controller.ChangeEmailController;
+import Controller.ChangePasswordController;
 import Controller.CreateAccountController;
 import Controller.LoginController;
 import DAO.DataSource;
@@ -18,7 +19,7 @@ public class Main {
 //        CreateAccountController.createAccount();
 //        LoginController.userLogin();
 
-        ChangeEmailController.changeEmail("ahmed@gmail.com");
+        ChangePasswordController.changePassword("ahmedzaher@gmail.com");
 //        DataSource dataSource = new DataSource(); // Create an instance of DataSource
 //        Connection c = DataSource.getConnection();
 //        if (c != null) {

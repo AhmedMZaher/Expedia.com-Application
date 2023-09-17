@@ -9,10 +9,13 @@ public class ChangeEmailController {
         String email = ChangeEmailView.getEmail();
 
         if(!User.isValidEmail(email)){
-            ChangeEmailView.displayErrorMessage();
+            ChangeEmailView.displayErrorMessage("Invalid email format");
             return;
         }
-        UserDao.changeEmail(oldEmail, email);
+        if(!UserDao.changeEmail(oldEmail, email)){
+            ChangeEmailView.displayErrorMessage("Something went wrong, please try again");
+            return;
+        }
         ChangeEmailView.displaySuccessMessage();
     }
 }
