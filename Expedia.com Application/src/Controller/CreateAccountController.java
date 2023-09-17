@@ -2,37 +2,36 @@ package Controller;
 
 import DAO.UserDao;
 import Model.User;
+import Utils.Validator;
 import View.CreateAccountView;
 import View.ShowProfileView;
 
 public class CreateAccountController {
     public static void createAccount(){
         // Get user input from view
-        String name = CreateAccountView.getName();
-        String email = CreateAccountView.getEmail();
-        String password = CreateAccountView.getPassword();
+        User user = CreateAccountView.getUserInput();
 
         // Perform Validations
-        if(!User.isValidEmail(email)){
+        if(!Validator.emailValidator(user.getEmail())){
             CreateAccountView.displayErrorMessage("Invalid email format");
             return;
         }
 
-        if(!User.isValidPassword(password)){
+        if(!Validator.passwordValidator(user.getPassword())){
             CreateAccountView.displayErrorMessage("Invalid password format");
             return;
         }
 
-        if(UserDao.isNameExist(name)){
+        if(UserDao.isNameExist(user.getName())){
             CreateAccountView.displayErrorMessage("Name already exist!");
             return;
         }
-        if(UserDao.isEmailExist(email)){
+        if(UserDao.isEmailExist(user.getEmail())){
             CreateAccountView.displayErrorMessage("Email already exist!");
             return;
         }
 
-        UserDao.saveUser(name, email, password);
-        ShowProfileView.displayUserProfile(name, email);
+        UserDao.saveUser(user.getName(), user.getEmail(), user.getPassword());
+        ShowProfileView.displayUserProfile(user);
     }
 }
