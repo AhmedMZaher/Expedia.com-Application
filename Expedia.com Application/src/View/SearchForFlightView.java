@@ -10,11 +10,11 @@ import java.util.Map;
 public class SearchForFlightView {
     public static FlightSpec getFlightSpec(){
         Map properties = new HashMap();
-        properties.put("fromCity", getFromCity());
-        properties.put("fromDate", getFromDate());
-        properties.put("toCity", getToCity());
-        properties.put("toDate", getToDate());
-        return new FlightSpec(properties);
+        String fromCity = getFromCity();
+        Date fromDate = getFromDate();
+        String toCity = getToCity();
+        Date toDate = getToDate();
+        return new FlightSpec(fromDate, toDate, fromCity, toCity);
     }
     private static String getFromCity() {
         System.out.println("Enter From: ");

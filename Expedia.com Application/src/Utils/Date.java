@@ -8,8 +8,8 @@ public class Date {
     public Date(String date) {
         String[] parts = date.split("-");
         day = Integer.parseInt(parts[0]);
-        month = Integer.parseInt(parts[0]);
-        year = Integer.parseInt(parts[0]);
+        month = Integer.parseInt(parts[1]);
+        year = Integer.parseInt(parts[2]);
 
     }
 
@@ -39,6 +39,6 @@ public class Date {
 
     @Override
     public String toString() {
-        return day + " - " + month + " - " + year;
+        return day + "-" + month + "-" + year;
     }
 }

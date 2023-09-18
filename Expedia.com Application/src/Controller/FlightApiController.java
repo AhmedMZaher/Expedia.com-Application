@@ -1,9 +1,6 @@
 package Controller;
 
-import Model.Flight;
-import Model.FlightAPI;
-import Model.FlightSpec;
-import Model.User;
+import Model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +12,8 @@ public class FlightApiController implements FlightAPI {
 
     public FlightApiController() {
         this.flightAPIS = new ArrayList<>();
+        // For testing
+        flightAPIS.add(TestFlightAPIAdapter.getInstance());
     }
 
     public static FlightApiController getInstance() {

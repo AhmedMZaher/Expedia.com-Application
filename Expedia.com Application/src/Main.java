@@ -1,7 +1,4 @@
-import Controller.ChangeEmailController;
-import Controller.ChangePasswordController;
-import Controller.CreateAccountController;
-import Controller.LoginController;
+import Controller.*;
 import DAO.DataSource;
 
 import java.sql.Connection;
@@ -19,7 +16,8 @@ public class Main {
 //        CreateAccountController.createAccount();
 //        LoginController.userLogin();
 
-        ChangePasswordController.changePassword("ahmedzaher@gmail.com");
+//        ChangePasswordController.changePassword("ahmedzaher@gmail.com");
+        BookFlightController.addFlight();
 //        DataSource dataSource = new DataSource(); // Create an instance of DataSource
 //        Connection c = DataSource.getConnection();
 //        if (c != null) {

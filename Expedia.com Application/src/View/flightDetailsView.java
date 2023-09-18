@@ -3,9 +3,15 @@ package View;
 import Model.Flight;
 import Utils.Date;
 
-public class flightDetailsView {
+public class FlightDetailsView {
     public static void displayFlightDetails(Flight flight){
-
+        printAirline(flight.getAirline());
+        printDepartureCity(flight.getFlightSpec().getDepartureCity());
+        printDepartureDate(flight.getFlightSpec().getDepartureDate());
+        printArrivalCity(flight.getFlightSpec().getArrivalCity());
+        printArrivalDate(flight.getFlightSpec().getArrivalDate());
+        printAircraftType(flight.getAircraftType());
+        printPrice(flight.getTicketPrice());
     }
     private static void printDepartureCity(String city){
         if(!city.isEmpty()){
