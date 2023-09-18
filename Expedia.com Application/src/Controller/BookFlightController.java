@@ -12,7 +12,12 @@ public class BookFlightController {
     public static void addFlight() {
         FlightSpec flightSpec = SearchForFlightView.getFlightSpec();
         List<Flight> flights = FlightApiController.getInstance().searchFlight(flightSpec);
-        for(Flight flight : flights)
-            FlightDetailsView.displayFlightDetails(flight);
+        FlightDetailsView.displayFlightsDetails(flights);
+        int choice = SearchForFlightView.getInputInRange(1, flights.size());
+        if(choice == -1){
+            SearchForFlightView.displayErrorMessage("Wrong input please try again");
+        }
+
+        SearchForFlightView.displaySuccessMessage();
     }
 }

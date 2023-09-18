@@ -3,7 +3,16 @@ package View;
 import Model.Flight;
 import Utils.Date;
 
+import java.util.List;
+
 public class FlightDetailsView {
+    public static void displayFlightsDetails(List<Flight> flights){
+        for(int i = 0; i < flights.size(); i++){
+            System.out.print((i + 1) + ".  ");
+            FlightDetailsView.displayFlightDetails(flights.get(i));
+            System.out.println("---------------------------------");
+        }
+    }
     public static void displayFlightDetails(Flight flight){
         printAirline(flight.getAirline());
         printDepartureCity(flight.getFlightSpec().getDepartureCity());
