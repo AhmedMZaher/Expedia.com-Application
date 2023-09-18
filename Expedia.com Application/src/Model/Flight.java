@@ -1,6 +1,9 @@
 package Model;
 
+import DAO.FlightDao;
+import DAO.ItemDao;
 import Utils.Date;
+import View.FlightDetailsView;
 
 public class Flight extends Item{
     private FlightSpec flightSpec;
@@ -11,7 +14,7 @@ public class Flight extends Item{
         this.flightSpec = flightSpec;
         this.airline = airline;
         this.aircraftType = aircraftType;
-        this.ticketPrice = ticketPrice;
+        setPrice(ticketPrice);
     }
 
     public FlightSpec getFlightSpec() {
@@ -25,5 +28,19 @@ public class Flight extends Item{
     public String getAircraftType() {
         return aircraftType;
     }
+    @Override
+    public void printItem(){
+        FlightDetailsView.displayFlightDetails(this);
+    }
 
+    @Override
+    public int getItemIdFromDatabase(){
+        int id = FlightDao.isFlightExist(this);
+        if(id == -1){
+            int lastID = ItemDao.addItem();
+            FlightDao.addFlight(this, lastID);
+            return lastID;
+        }
+        return id;
+    }
 }

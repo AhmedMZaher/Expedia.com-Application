@@ -20,7 +20,7 @@ public class FlightDetailsView {
         printArrivalCity(flight.getFlightSpec().getArrivalCity());
         printArrivalDate(flight.getFlightSpec().getArrivalDate());
         printAircraftType(flight.getAircraftType());
-        printPrice(flight.getTicketPrice());
+        printPrice(flight.getPrice());
     }
     private static void printDepartureCity(String city){
         if(!city.isEmpty()){

@@ -50,23 +50,7 @@ public class SearchForFlightView {
         System.out.println("Enter number of Children: ");
         return ScannerProvider.scanner.nextInt();
     }
-    // Function take user flight choice and if it's not valid return -1
-    public static int getInputInRange(int min, int max){
-        int input;
 
-        try {
-            System.out.print("Enter a number between " + min + " and " + max + ": ");
-            input = Integer.parseInt(ScannerProvider.scanner.nextLine());
-
-            if (input < min || input > max) {
-                return -1;
-            }
-            return input;
-
-        } catch (NumberFormatException e) {
-            return -1;
-        }
-    }
     public static void displaySuccessMessage() {
         System.out.println("Flight Added successfully!");
     }

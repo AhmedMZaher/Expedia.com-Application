@@ -16,4 +16,6 @@ public class Validator {
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
+    // Function take user flight choice and if it's not valid return -1
+
 }
