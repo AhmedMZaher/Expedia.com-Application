@@ -14,7 +14,7 @@ public class HotelDetailsView {
             System.out.println("---------------------------------");
         }
     }
-    private static void displayHotelDetails(Hotel hotel){
+    public static void displayHotelDetails(Hotel hotel){
         printDepartureDate(hotel.getHotelSpec().getDepartureDate());
         printArrivalDate(hotel.getHotelSpec().getArrivalDate());
         printHotelName(hotel.getHotelName());
