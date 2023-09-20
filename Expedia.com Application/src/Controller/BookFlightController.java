@@ -18,9 +18,8 @@ public class BookFlightController {
         FlightDetailsView.displayFlightsDetails(flights);
         int choice = Printer.getInputInRange(1, flights.size());
         if(choice == -1){
-            SearchForFlightView.displayErrorMessage("Wrong input please try again");
+            Printer.displayErrorMessage();
         }
-        System.out.println("TEST:  " + choice);
         Flight flight = flights.get(choice - 1);
         ShoppingCart.getINSTANCE().addItemToCart(flight);
         SearchForFlightView.displaySuccessMessage();

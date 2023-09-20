@@ -13,8 +13,8 @@ public class AddItineraryController {
             choice = Printer.getInputInRange(1, 4);
             if (choice == 1)
                 BookFlightController.addFlight();
-//        else if (choice == 2)
-//            //
+            else if (choice == 2)
+                BookHotelController.addHotel();
             else if (choice == 3)
                 CheckoutController.checkout(userID);
         } while (choice != 4);

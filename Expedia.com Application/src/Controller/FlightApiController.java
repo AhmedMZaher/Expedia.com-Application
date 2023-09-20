@@ -11,7 +11,9 @@ public class FlightApiController implements FlightAPI {
     List<FlightAPI> flightAPIS;
 
     public FlightApiController() {
-        this.flightAPIS = new ArrayList<>();
+        if(flightAPIS == null)
+            flightAPIS = new ArrayList<>();
+
         // For testing
         flightAPIS.add(TestFlightAPIAdapter.getInstance());
     }
