@@ -9,18 +9,29 @@ import java.util.List;
 
 public class CheckoutController {
     public static void checkout(int userID){
-        CheckoutView.printCart();
-//        PaymentController.pay()
-        //if(PaymentController.pay()){
+        try {
+            CheckoutView.printCart();
+            // PaymentController.pay()
+            //if(PaymentController.pay()){
             CheckoutView.displaySuccessMessage();
             confirmItinerary();
-//        }else
-            CheckoutView.displayErrorMessage();
+            //}else
+            //CheckoutView.displayErrorMessage();
+        } catch (Exception e) {
+//            e.printStackTrace();
+            System.out.println("Error: An error occurred while processing the checkout.");
+        }
     }
     private static void confirmItinerary(){
         List<Item> list = ShoppingCart.getINSTANCE().getItems();
         for(Item item : list){
-            int itemID = item.getItemIdFromDatabase();
+            try {
+                int itemID = item.getItemIdFromDatabase();
+
+            } catch (Exception e) {
+//                e.printStackTrace();
+                System.out.println("Error: An error occurred while confirming the itinerary.");
+            }
         }
     }
 }
