@@ -7,6 +7,27 @@ public class User {
     private String name;
     private String email;
     private String password;
+    // Singleton instance for logged in user
+    private static User instance;
+
+    public static User getInstance() {
+        return instance;
+    }
+
+    public static void setInstance(String name, String username, String email) {
+        instance = new User(name, username, email);
+    }
+    public static void logout() {
+        instance = null;
+    }
+
+    public static boolean isLoggedIn() {
+        if (instance == null)
+            return false;
+        return true;
+    }
+
+
 
     public User(String name, String email, String password) {
         this.name = name;

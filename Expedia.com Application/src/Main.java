@@ -5,6 +5,7 @@ import Model.Flight;
 import Model.FlightSpec;
 import Utils.Date;
 import View.AddItineraryView;
+import View.MainMenuView;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,7 +21,8 @@ public class Main {
         }
 
 
-        AddItineraryController.run(1);
+        MainMenuController.run();
+//        AddItineraryController.run(1);
 
 
 

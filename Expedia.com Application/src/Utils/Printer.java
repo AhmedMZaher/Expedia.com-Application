@@ -34,4 +34,7 @@ public class Printer {
         }
         return choice;
     }
+    public static void displaySuccessMessage() {
+        System.out.println("Flight Added successfully!");
+    }
 }
