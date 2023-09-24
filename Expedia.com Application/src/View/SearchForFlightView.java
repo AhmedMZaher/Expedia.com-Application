@@ -2,6 +2,7 @@ package View;
 
 import Model.FlightSpec;
 import Utils.Date;
+import Utils.Printer;
 import Utils.ScannerProvider;
 
 
@@ -21,8 +22,7 @@ public class SearchForFlightView {
 
     private static Date getFromDate() {
         System.out.println("Enter From Date (dd-mm-yy): ");
-        String fromDate;
-        fromDate = ScannerProvider.scanner.nextLine();
+        String fromDate = Printer.getDateInput();
         return new Date(fromDate);
     }
 
@@ -33,8 +33,7 @@ public class SearchForFlightView {
 
     private static Date getToDate() {
         System.out.println("Enter To Date (dd-mm-yy): ");
-        String fromDate;
-        fromDate = ScannerProvider.scanner.nextLine();
+        String fromDate = Printer.getDateInput();
         return new Date(fromDate);
     }
 
