@@ -15,7 +15,8 @@ public class UserDashboardController {
                 ShowProfileView.displayUserProfile(User.getInstance());
             else if (choice == 2)
                 AddItineraryController.run(UserDao.getId(User.getInstance()));
-//            else if (choice == 3)
+            else if (choice == 3)
+                OrderHistoryController.run(UserDao.getId(User.getInstance()));
             else if (choice == 4){
                 System.out.println("Logout successfully");
                 User.logout();

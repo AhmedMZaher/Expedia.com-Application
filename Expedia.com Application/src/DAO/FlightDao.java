@@ -1,7 +1,7 @@
 package DAO;
 
-import Model.Flight;
-import Model.Item;
+import Model.*;
+import Utils.Date;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,5 +58,28 @@ public class FlightDao {
         } catch (SQLException e) {
             e.printStackTrace(); // Handle the error appropriately (logging, throwing a custom exception, etc.)
         }
+    }
+    public static Item getItemUsingId(int itemId){
+        Flight flight = null;
+        try (Connection connection = DataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Flight WHERE itemId = ?")) {
+            statement.setInt(1, itemId);
+
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                // Create Flight object based on the result set
+                String airline = resultSet.getString("airline");
+                double cost = resultSet.getDouble("cost");
+                String aircraftType = resultSet.getString("aircraftType");
+                Date departureDate = new Date(resultSet.getString("departureDate "));
+                Date arrivalDate  = new Date(resultSet.getString("arrivalDate"));
+                String departureCity = resultSet.getString("departureCity");
+                String arrivalCity = resultSet.getString("arrivalCity");
+                flight = new Flight(new FlightSpec(departureDate, arrivalDate, departureCity, arrivalCity), airline, aircraftType, cost);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the error appropriately
+        }
+        return flight;
     }
 }

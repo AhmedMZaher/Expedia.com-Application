@@ -1,8 +1,11 @@
 package DAO;
 
+import Model.Hotel;
 import Model.Item;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemDao {
     public static int addItem() {
@@ -19,11 +22,19 @@ public class ItemDao {
                 return -1;
             }
 
-
         } catch (SQLException e) {
             e.printStackTrace(); // Handle the error appropriately (logging, throwing a custom exception, etc.)
             return -1;
         }
     }
 
+    public static Item getItem(int itemId) {
+        Item item;
+        item = HotelDao.getItemUsingId(itemId);
+        if (item != null)
+            return item;
+
+        item = FlightDao.getItemUsingId(itemId);
+        return item;
+    }
 }
