@@ -19,7 +19,7 @@ public class CheckoutController {
             //}else
             //CheckoutView.displayErrorMessage();
         } catch (Exception e) {
-//            e.printStackTrace();
+            e.printStackTrace();
             System.out.println("Error: An error occurred while processing the checkout.");
         }
     }
@@ -30,7 +30,7 @@ public class CheckoutController {
                 int itemID = item.getItemIdFromDatabase();
                 UserItemsDao.addItem(itemID, userId);
             } catch (Exception e) {
-//                e.printStackTrace();
+                e.printStackTrace();
                 System.out.println("Error: An error occurred while confirming the itinerary.");
             }
         }

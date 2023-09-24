@@ -8,6 +8,7 @@ import java.util.List;
 public class CheckoutView {
     public static void printCart(){
         List<Item> list = ShoppingCart.getINSTANCE().getItems();
+        System.out.println("Total Cost: " + ShoppingCart.getINSTANCE().getTotalCost());
         for(Item item : list)
             item.printItem();
     }
