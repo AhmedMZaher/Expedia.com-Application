@@ -2,6 +2,7 @@ package View;
 
 import Model.HotelSpec;
 import Utils.Date;
+import Utils.Printer;
 import Utils.ScannerProvider;
 
 public class SearchForHotelView {
@@ -16,14 +17,12 @@ public class SearchForHotelView {
     }
     private static Date getFromDate() {
         System.out.println("Enter From Date (dd-mm-yy): ");
-        String fromDate;
-        fromDate = ScannerProvider.scanner.nextLine();
+        String fromDate = Printer.getDateInput();
         return new Date(fromDate);
     }
     private static Date getToDate() {
         System.out.println("Enter To Date (dd-mm-yy): ");
-        String fromDate;
-        fromDate = ScannerProvider.scanner.nextLine();
+        String fromDate = Printer.getDateInput();
         return new Date(fromDate);
     }
     private static String getCity() {
