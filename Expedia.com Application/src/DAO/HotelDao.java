@@ -18,8 +18,8 @@ public class HotelDao {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Hotel WHERE departureDate = ?" +
                     "AND arrivalDate = ? AND city = ? AND country = ? AND noOfAdults = ? AND noOfChildren = ?" +
                     "AND roomType = ? AND hotelName = ?")) {
-            statement.setDate(1, java.sql.Date.valueOf(hotel.getHotelSpec().getDepartureDate().toString()));
-            statement.setDate(2, java.sql.Date.valueOf(hotel.getHotelSpec().getArrivalDate().toString()));
+            statement.setString(1, hotel.getHotelSpec().getDepartureDate().toString());
+            statement.setString(2, hotel.getHotelSpec().getArrivalDate().toString());
             statement.setString(3, hotel.getHotelSpec().getCity());
             statement.setString(4, hotel.getHotelSpec().getCountry());
             statement.setInt(5, hotel.getHotelSpec().getNumberOfAdults());
@@ -43,8 +43,8 @@ public class HotelDao {
                 "VALUES (?, ? , ? , ?, ? , ? , ? ,?, ?, ?)")){
             statement.setString(1, hotel.getHotelSpec().getCity());
             statement.setString(2, hotel.getHotelSpec().getCountry());
-            statement.setDate(3, java.sql.Date.valueOf(hotel.getHotelSpec().getDepartureDate().toString()));
-            statement.setDate(4, java.sql.Date.valueOf(hotel.getHotelSpec().getArrivalDate().toString()));
+            statement.setString(3, hotel.getHotelSpec().getDepartureDate().toString());
+            statement.setString(4, hotel.getHotelSpec().getArrivalDate().toString());
             statement.setInt(5, hotel.getHotelSpec().getNumberOfAdults());
             statement.setInt(6, hotel.getHotelSpec().getNumberOfChildren());
             statement.setString(7, hotel.getRoomType());

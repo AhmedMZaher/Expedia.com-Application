@@ -18,8 +18,8 @@ public class FlightDao {
                      "departureDate = ? AND arrivalDate = ? AND departureCity = ? AND arrivalCity = ? " +
                      "AND airline = ? AND aircraftType = ?");
         ) {
-            statement.setDate(1, java.sql.Date.valueOf(flight.getFlightSpec().getDepartureDate().toString()));
-            statement.setDate(2, java.sql.Date.valueOf(flight.getFlightSpec().getArrivalDate().toString()));
+            statement.setString(1, flight.getFlightSpec().getDepartureDate().toString());
+            statement.setString(2, flight.getFlightSpec().getArrivalDate().toString());
             statement.setString(3, flight.getFlightSpec().getDepartureCity());
             statement.setString(4, flight.getFlightSpec().getArrivalCity());
             statement.setString(5, flight.getAirline());
@@ -47,8 +47,8 @@ public class FlightDao {
             statement.setString(1, flight.getAirline());
             statement.setDouble(2, flight.getPrice());
             statement.setString(3, flight.getAircraftType());
-            statement.setDate(4, java.sql.Date.valueOf(flight.getFlightSpec().getDepartureDate().toString()));
-            statement.setDate(5, java.sql.Date.valueOf(flight.getFlightSpec().getArrivalDate().toString()));
+            statement.setString(4, flight.getFlightSpec().getDepartureDate().toString());
+            statement.setString(5, flight.getFlightSpec().getArrivalDate().toString());
             statement.setString(6, flight.getFlightSpec().getDepartureCity());
             statement.setString(7, flight.getFlightSpec().getArrivalCity());
             statement.setInt(8, itemId);
@@ -71,7 +71,7 @@ public class FlightDao {
                 String airline = resultSet.getString("airline");
                 double cost = resultSet.getDouble("cost");
                 String aircraftType = resultSet.getString("aircraftType");
-                Date departureDate = new Date(resultSet.getString("departureDate "));
+                Date departureDate = new Date(resultSet.getString("departureDate"));
                 Date arrivalDate  = new Date(resultSet.getString("arrivalDate"));
                 String departureCity = resultSet.getString("departureCity");
                 String arrivalCity = resultSet.getString("arrivalCity");
