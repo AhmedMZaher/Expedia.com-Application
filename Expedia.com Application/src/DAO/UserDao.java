@@ -114,14 +114,16 @@ public class UserDao {
 
     public static int getId(User user) {
         try (Connection connection = DataSource.getConnection();
-             PreparedStatement statement = connection.prepareStatement("SELECT id FROM Traveler WHERE" +
+             PreparedStatement statement = connection.prepareStatement("SELECT id FROM Traveler WHERE " +
                      "name = ? AND password = ? AND email = ?")) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getPassword());
             statement.setString(3, user.getEmail());
 
             ResultSet resultSet = statement.executeQuery();
-            return resultSet.getInt("id");
+            if (resultSet.next())
+                return resultSet.getInt("id");
+            else return -1;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
